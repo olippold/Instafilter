@@ -13,6 +13,7 @@ import CoreImage.CIFilterBuiltins
 struct ContentView: View {
     @State private var image: Image?
     @State private var showingImagePicker = false
+    @State private var inputImage: UIImage?
    
     var body: some View {
         VStack {
@@ -24,15 +25,17 @@ struct ContentView: View {
                 self.showingImagePicker = true
             }
         }
-        .sheet(isPresented: $showingImagePicker) {
-            ImagePicker()
+        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+            ImagePicker(image: self.$inputImage)
         }
     }
     
-    /*func loadImage() {
-        guard let inputImage = UIImage(named: "Example") else { return }
-        
-        let beginImage = CIImage(image: inputImage)
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
+        let imageSaver = ImageSaver()
+        imageSaver.writeToPhotoAlbum(image: inputImage)
+        /*let beginImage = CIImage(image: inputImage)
         let context = CIContext()
         //let currentFilter = CIFilter.pixellate()
         //let currentFilter = CIFilter.sepiaTone()
@@ -58,8 +61,18 @@ struct ContentView: View {
             
             // and convert that to a SwiftUI Image
             image = Image(uiImage: uiImage)
-        }
-    } */
+        } */
+    }
+}
+
+class ImageSaver: NSObject {
+    func writeToPhotoAlbum(image: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveError), nil)
+    }
+    
+    @objc func saveError(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        print("Save finished!")
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
