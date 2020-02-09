@@ -6,7 +6,6 @@
 //  Copyright © 2020 Oliver Lippold. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
@@ -28,7 +27,7 @@ struct ImagePicker: UIViewControllerRepresentable {
     }
     
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-        var parent: ImagePicker
+        let parent: ImagePicker
         
         init(_ parent: ImagePicker) {
             self.parent = parent
