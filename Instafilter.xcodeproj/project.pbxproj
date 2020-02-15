@@ -14,6 +14,7 @@
 		46D31CEF23E5CACB0096C9AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46D31CEE23E5CACB0096C9AA /* Preview Assets.xcassets */; };
 		46D31CF223E5CACB0096C9AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46D31CF023E5CACB0096C9AA /* LaunchScreen.storyboard */; };
 		46D3EB6123E722FC008ED6CE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D3EB6023E722FC008ED6CE /* ImagePicker.swift */; };
+		46D55A8B23F83014002E19BE /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D55A8A23F83014002E19BE /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		46D31CF123E5CACB0096C9AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46D31CF323E5CACB0096C9AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46D3EB6023E722FC008ED6CE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		46D55A8A23F83014002E19BE /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				46D31CE523E5CACA0096C9AA /* AppDelegate.swift */,
 				46D31CE723E5CACA0096C9AA /* SceneDelegate.swift */,
 				46D31CE923E5CACA0096C9AA /* ContentView.swift */,
+				46D55A8A23F83014002E19BE /* ImageSaver.swift */,
 				46D3EB6023E722FC008ED6CE /* ImagePicker.swift */,
 				46D31CEB23E5CACB0096C9AA /* Assets.xcassets */,
 				46D31CF023E5CACB0096C9AA /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 			files = (
 				46D31CE623E5CACA0096C9AA /* AppDelegate.swift in Sources */,
 				46D3EB6123E722FC008ED6CE /* ImagePicker.swift in Sources */,
+				46D55A8B23F83014002E19BE /* ImageSaver.swift in Sources */,
 				46D31CE823E5CACA0096C9AA /* SceneDelegate.swift in Sources */,
 				46D31CEA23E5CACA0096C9AA /* ContentView.swift in Sources */,
 			);
